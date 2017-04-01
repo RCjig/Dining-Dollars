@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dining Dollars</string>
+    <string name="amount_remaining">Enter amount of remaining Dining Dollars</string>
+    <string name="button">Caculate daily spending amount</string>
+    <string name="ignore_days">Ignore Days?</string>
+    <string name="spending_average">Daily Spending Average</string>
+</resources>
