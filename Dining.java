@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.util.Scanner;
 
 public class Dining {
 
@@ -53,18 +54,24 @@ public class Dining {
 
     // calculate remaining dining dollars
 
-    double diningPlan = 647.44; // this will be user input
-
+    double diningPlan = 0;
     int daysToNotSpend = 0;
 
+    // read in remaining dining dollars and ignored days
+    Scanner input = new Scanner(System.in);
+    System.out.println("Enter amount of remaining Dining Dollars.");
+    diningPlan = input.nextDouble();
+    System.out.println("Enter amount of days to ignore.");
+    daysToNotSpend += input.nextInt();
+    input.close();
+
     if (daysToNotSpend != 0) {
-      daysLeft += daysToNotSpend;
+      daysLeft -= daysToNotSpend;
     }
     
     double dailySpending = diningPlan/daysLeft;
 
-    System.out.println(dailySpending);
-    System.out.println(daysLeft);
+    System.out.println("Your daily spending average is $" + String.format("%.2f", dailySpending));
     
 	}
 }
